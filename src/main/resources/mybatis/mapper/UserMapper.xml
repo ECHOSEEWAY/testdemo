@@ -1,0 +1,15 @@
+package mybatis.mapper
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.xyz.dao.UserDao" >
+
+    <!-- 查询-->
+    <select id="selectUser" resultType="cn.xyz.entity.User">
+        select * from user where username = #{username} and password = #{password};
+    </select>
+
+    <!-- 新增-->
+    <insert id="inserUser">
+        insert user (username,password) values (#{username},#{password})
+    </insert>
+</mapper>
